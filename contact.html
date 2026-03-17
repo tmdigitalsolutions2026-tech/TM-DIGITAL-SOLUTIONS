@@ -23,7 +23,7 @@
 
 <header>
             <nav id="navbar">
-<a href="#Home" class="logo">
+<a href="index.html" class="logo">
 <img src="logo.jpeg" alt="TM Digital Solutions Logo">
 <span>TM DIGITAL SOLUTIONS</span>
 </a>
@@ -66,7 +66,7 @@ we are ready to help you.
 
 <div class="info-item">
 <i class="fas fa-envelope"></i>
-<span>info@tmdigitalsolutions.com</span>
+<span>emj2026@salestmdigitalsolutions.com</span>
 </div>
 
 <div class="info-item">
@@ -81,33 +81,31 @@ we are ready to help you.
 
 </div>
 
-
-<div class="contact-form">
-
-<form>
+<form onsubmit="enviarWhatsApp(event)">
 
 <div class="input-group">
 <label>Name</label>
-<input type="text" placeholder="Your Name" required>
+<input type="text" name="nombre" placeholder="Your Name" required>
 </div>
 
 <div class="input-group">
 <label>Email</label>
-<input type="email" placeholder="Your Email" required>
+<input type="email" name="email" placeholder="Your Email" required>
 </div>
 
 <div class="input-group">
 <label>Subject</label>
-<input type="text" placeholder="Subject">
+<input type="text" name="asunto" placeholder="Subject">
 </div>
 
 <div class="input-group">
 <label>Message</label>
-<textarea rows="5" placeholder="Write your message here..." required></textarea>
+<textarea name="mensaje" rows="5" placeholder="Write your message here..." required></textarea>
 </div>
 
 <button type="submit" class="btn">Send Message</button>
 
+</form>
 </form>
 
 </div>
@@ -121,7 +119,7 @@ we are ready to help you.
 
 <p>Let us help you create a professional online presence.</p>
 
-<a href="#contact" class="cta-button">Get a Free Quote</a>
+<a href="https://wa.me/50432954450" class="cta-button" target="_blank">Get a Free Quote</a>
 
 </section>
 
@@ -176,7 +174,6 @@ solutions to help businesses grow online.
 <div class="social-links">
 <a href="https://www.facebook.com/profile.php?id=61579690926715"><i class="fab fa-facebook-f"></i></a>
 <a href="https://github.com/tmdigitalsolutions2026-tech/TM-DIGITAL-SOLUTIONS.git"><i class="fab fa-github"></i></a>
-<a href="#"><i class="fab fa-linkedin"></i></a>
 <a href="https://www.instagram.com/tmdigitalsolutions2026/"><i class="fab fa-instagram"></i></a>
 </div>
 </div>
@@ -191,7 +188,28 @@ solutions to help businesses grow online.
 
 </footer>
 
-</body>
+<script>
+function enviarWhatsApp(e) {
+    e.preventDefault();
+
+    let nombre = document.querySelector('input[name="nombre"]').value;
+    let email = document.querySelector('input[name="email"]').value;
+    let asunto = document.querySelector('input[name="asunto"]').value;
+    let mensaje = document.querySelector('textarea[name="mensaje"]').value;
+
+    let texto = "Hola, mi nombre es " + nombre + 
+                "%0AEmail: " + email +
+                "%0AAsunto: " + asunto +
+                "%0AMensaje: " + mensaje;
+
+    let numero = "50432954450"; // ⚠️ CAMBIA ESTO
+
+    let url = "https://wa.me/" + numero + "?text=" + texto;
+
+    window.open(url, "_blank");
+}
+</script>
+
 <script>
 
 const toggle = document.getElementById("menu-toggle");
@@ -202,4 +220,5 @@ nav.classList.toggle("active");
 });
 
 </script>
+</body>
 </html>
