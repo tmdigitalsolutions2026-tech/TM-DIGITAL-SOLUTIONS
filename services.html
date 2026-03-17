@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Services TM Digital Solutions</title>
         <link rel="stylesheet" href="services.css">
         <script src="https://kit.fontawesome.com/bddb2ac098.js" crossorigin="anonymous"></script>
     </head>
@@ -13,18 +13,25 @@
 </a>
         <header>
             <nav id="navbar">
-               <a href="#Home" class="logo">
-                <img src="logo.jpeg" alt="TM Digital Solutions Logo">
-                <span>TM DIGITAL SOLUTIONS</span>
-                 </a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+<a href="#Home" class="logo">
+<img src="logo.jpeg" alt="TM Digital Solutions Logo">
+<span>TM DIGITAL SOLUTIONS</span>
+</a>
+
+<!-- BOTÓN HAMBURGUESA -->
+<div class="menu-toggle" id="menu-toggle">
+<i class="fas fa-bars"></i>
+</div>
+
+<ul class="nav-links" id="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
         </header>
 
 <section class="hero">
@@ -117,5 +124,15 @@ solutions to help businesses grow online.
 </div>
 
 </footer>
+<script>
+
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+nav.classList.toggle("active");
+});
+
+</script>
     </body>
     </html>     

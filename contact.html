@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact | TM Digital Solutions</title>
+<title>Contact TM Digital Solutions</title>
 
 <link rel="stylesheet" href="contact.css">
 
@@ -22,24 +22,27 @@
 
 
 <header>
-
-<nav id="navbar">
-
-<a href="index.html" class="logo">
+            <nav id="navbar">
+<a href="#Home" class="logo">
 <img src="logo.jpeg" alt="TM Digital Solutions Logo">
 <span>TM DIGITAL SOLUTIONS</span>
 </a>
 
-<ul class="nav-links">
+<!-- BOTÓN HAMBURGUESA -->
+<div class="menu-toggle" id="menu-toggle">
+<i class="fas fa-bars"></i>
+</div>
+
+<ul class="nav-links" id="nav-links">
+<li><a href="index.html">Home</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="services.html">Services</a></li>
 <li><a href="projects.html">Projects</a></li>
-<li><a href="contact.html">Contact</a></li>
+
 </ul>
 
 </nav>
-
-</header>
+        </header>
 
 
 <section class="hero">
@@ -192,4 +195,14 @@ solutions to help businesses grow online.
 </footer>
 
 </body>
+<script>
+
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+nav.classList.toggle("active");
+});
+
+</script>
 </html>
